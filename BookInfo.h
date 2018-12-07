@@ -1,10 +1,9 @@
-enum Status {
-	ONTHEBOOKSHELF,
-	BORROWED
-};
-
 class BookInfo {
 public:
+	enum Status {
+		ONTHEBOOKSHELF,
+		BORROWED
+	};
 	std::string author;
 	std::string category;
 	unsigned int pagesno;

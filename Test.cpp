@@ -31,9 +31,9 @@ int main() {
 	typedef string BookTitle;
 	Map<BookTitle, BookInfo> library;
 
-	library.add("The Adventures of Tom Sawyer", BookInfo("Mark Twain", "Children's literature", 200, ONTHEBOOKSHELF));
-	library.add("Romeo and Juliet", BookInfo("William Shakespeare ", "Tragedy", 120, BORROWED));
-	library.add("Metro 2033", BookInfo("Dmitry Glukhovsky", "Post-apocalyptic", 350, ONTHEBOOKSHELF));
+	library.add("The Adventures of Tom Sawyer", BookInfo("Mark Twain", "Children's literature", 200, BookInfo::ONTHEBOOKSHELF));
+	library.add("Romeo and Juliet", BookInfo("William Shakespeare ", "Tragedy", 120, BookInfo::BORROWED));
+	library.add("Metro 2033", BookInfo("Dmitry Glukhovsky", "Post-apocalyptic", 350, BookInfo::ONTHEBOOKSHELF));
 
 	cout << endl << "=== LIBRARY ===" << endl;
 	cout << library;
