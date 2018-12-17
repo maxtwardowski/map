@@ -42,10 +42,16 @@ public:
 		this->clear();
 	}
 	void add(K_Type key, V_Type value) {
-		node * newnode = new node(key);
-		newnode->next = head;
-		head = newnode;
-		head->val = value;
+		V_Type *found = this->find(key);
+		if (found) {
+			*found = value;
+		}
+		else {
+			node * newnode = new node(key);
+			newnode->next = head;
+			head = newnode;
+			head->val = value;
+		}
 	}
 	V_Type * find(K_Type key) {
 		node * c = head;
